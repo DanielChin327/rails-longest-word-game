@@ -1,0 +1,10 @@
+<form action="/new" method="TODO" data-turbo="false">
+  <h1>New Game</h1>
+  <%@letters.each do |letter|%>
+    <%= letter%>
+    <%end%>
+  <h3>What is the longest word you can find?</h3>
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <input type="text" name="answer">
+  <input type="submit" value="Answer">
+</form>
